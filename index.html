@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WristGram — Privacy Policy &amp; Terms of Use</title>
+    <meta name="description" content="WristGram Privacy Policy and Terms of Use — an unofficial third-party Telegram client for Apple Watch.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="./WristGram.png">
+    <link rel="apple-touch-icon" href="./WristGram.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: #1a2235;
+            --bg-card-hover: #1e2a3f;
+            --accent: #64B5F6;
+            --accent-dim: rgba(100, 181, 246, 0.15);
+            --accent-border: rgba(100, 181, 246, 0.25);
+            --text-primary: #e8edf5;
+            --text-secondary: #8896aa;
+            --text-muted: #5a6578;
+            --border: rgba(255, 255, 255, 0.07);
+            --border-accent: rgba(100, 181, 246, 0.3);
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.75;
+            min-height: 100vh;
+        }
+
+        /* ─── HEADER ─── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            gap: 4px;
+        }
+
+        nav a {
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+            background: var(--bg-card);
+        }
+
+        nav a.active {
+            color: var(--accent);
+            background: var(--accent-dim);
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 80px 24px 60px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            background: var(--accent-dim);
+            border: 1px solid var(--border-accent);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 48px);
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #e8edf5 0%, #8896aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #64B5F6 0%, #90CAF9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .meta-item svg {
+            width: 14px;
+            height: 14px;
+            opacity: 0.6;
+        }
+
+        /* ─── TABLE OF CONTENTS ─── */
+        .toc-section {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 48px;
+        }
+
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+        }
+
+        .toc h2 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+        }
+
+        @media (max-width: 560px) {
+            .toc-grid { grid-template-columns: 1fr; }
+        }
+
+        .toc-grid a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 12px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 14px;
+            transition: all 0.15s ease;
+        }
+
+        .toc-grid a:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .toc-grid a .num {
+            width: 22px;
+            height: 22px;
+            background: var(--accent-dim);
+            border: 1px solid var(--border-accent);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent);
+            flex-shrink: 0;
+            font-family: var(--font-mono);
+        }
+
+        .toc-divider {
+            grid-column: 1 / -1;
+            height: 1px;
+            background: var(--border);
+            margin: 8px 0;
+        }
+
+        .toc-section-label {
+            grid-column: 1 / -1;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 8px 12px 4px;
+        }
+
+        /* ─── SECTION ─── */
+        .content-section {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .content-section .section-header {
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 10px;
+        }
+
+        .section-tag.privacy { color: #4CAF50; }
+        .section-tag.terms { color: var(--accent); }
+
+        .section-tag::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            opacity: 0.8;
+        }
+
+        h2 {
+            font-size: clamp(22px, 4vw, 28px);
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 28px;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 6px;
+            line-height: 1.7;
+        }
+
+        li strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+
+        /* ─── CALLOUT BOXES ─── */
+        .callout {
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            margin: 20px 0;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        .callout-info {
+            background: rgba(100, 181, 246, 0.08);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            color: #90CAF9;
+        }
+
+        .callout-warning {
+            background: rgba(255, 202, 40, 0.07);
+            border: 1px solid rgba(255, 202, 40, 0.2);
+            color: #FFD54F;
+        }
+
+        .callout-success {
+            background: rgba(76, 175, 80, 0.08);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            color: #81C784;
+        }
+
+        .callout-label {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ─── LAST UPDATED ─── */
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        footer .footer-links {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-links a {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        footer .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* ─── SCROLL TO TOP ─── */
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 42px;
+            height: 42px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            z-index: 50;
+            color: var(--accent);
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 640px) {
+            .hero { padding: 56px 24px 40px; }
+            .header-inner { height: 56px; }
+            nav { gap: 0; }
+            nav a { padding: 6px 10px; font-size: 13px; }
+            .content-section { padding-bottom: 48px; }
+        }
+
+        /* ─── PRINT ─── */
+        @media print {
+            header, nav, .back-to-top { display: none; }
+            body { background: white; color: #1a1a1a; }
+            .content-section h2, .content-section h3 { color: #1a1a1a; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">
+            <img class="logo-icon" src="./WristGram.png" alt="WristGram app icon">
+            <span class="logo-text">Wrist<span>Gram</span></span>
+        </a>
+        <nav>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Use</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="hero-badge">Legal</div>
+    <h1>Privacy Policy &amp;<br><span>Terms of Use</span></h1>
+    <p>WristGram is an unofficial third-party Telegram client for Apple Watch. Please read these terms carefully before using the app.</p>
+    <div class="hero-meta">
+        <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Last updated: May 2026
+        </div>
+        <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Version 1.0
+        </div>
+        <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Apple Watch App
+        </div>
+    </div>
+</section>
+
+<!-- ─── TABLE OF CONTENTS ─── -->
+<section class="toc-section">
+    <div class="toc">
+        <h2>Contents</h2>
+        <div class="toc-grid">
+
+            <a href="#privacy"><span class="num">1</span> About This Policy</a>
+            <a href="#data-collected"><span class="num">2</span> Data We Collect</a>
+            <a href="#data-storage"><span class="num">3</span> How We Store Data</a>
+            <a href="#data-deletion"><span class="num">4</span> Data Retention &amp; Deletion</a>
+            <a href="#third-party"><span class="num">5</span> Third-Party Services</a>
+            <a href="#children"><span class="num">6</span> Children's Privacy</a>
+            <a href="#changes-privacy"><span class="num">7</span> Changes to This Policy</a>
+            <a href="#contact-privacy"><span class="num">8</span> Contact Us</a>
+
+            <div class="toc-divider"></div>
+            <div class="toc-section-label">Terms of Use</div>
+
+            <a href="#terms"><span class="num">9</span> License &amp; Acceptance</a>
+            <a href="#service-scope"><span class="num">10</span> Service Scope</a>
+            <a href="#telegram-relation"><span class="num">11</span> Relationship to Telegram</a>
+            <a href="#subscriptions"><span class="num">12</span> Subscriptions</a>
+            <a href="#acceptable-use"><span class="num">13</span> Acceptable Use</a>
+            <a href="#availability"><span class="num">14</span> Availability</a>
+            <a href="#disclaimer"><span class="num">15</span> Disclaimer</a>
+            <a href="#contact-terms"><span class="num">16</span> Contact &amp; Support</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRIVACY POLICY
+═══════════════════════════════════════════════════════════ -->
+<section class="content-section" id="privacy">
+    <div class="section-header">
+        <div class="section-tag privacy">Privacy Policy</div>
+        <h2>Your Privacy Matters</h2>
+        <p>This Privacy Policy explains how WristGram handles your data. We believe your data belongs to you — not to us, not to advertisers.</p>
+        <div class="last-updated">📅 May 2026</div>
+    </div>
+
+    <h3 id="data-collected">1. Data We Collect</h3>
+    <p>WristGram interacts with your Telegram account through Telegram's official API (TDLib). All message data flows through Telegram's infrastructure and is governed by <a href="https://telegram.org/privacy" target="_blank" rel="noopener">Telegram's Privacy Policy</a>.</p>
+
+    <h3>Data accessed by WristGram itself:</h3>
+    <ul>
+        <li><strong>Messages &amp; Chat Data</strong> — WristGram displays message content (text, photos, voice notes, contacts, locations) on your Apple Watch. Message metadata (sender name, timestamp, chat title) may be temporarily cached locally on the watch.</li>
+        <li><strong>Photos &amp; Media</strong> — Photos you choose to send from WristGram are transmitted directly to Telegram's servers. Photos received in Telegram chats are displayed on your Watch and may be temporarily cached locally.</li>
+        <li><strong>Voice Messages</strong> — Voice messages you record and send are transmitted to Telegram's servers via your iPhone's network connection.</li>
+        <li><strong>Contacts</strong> — When you share a contact from WristGram, the contact information is sent to Telegram. WristGram may access your Contacts with your permission to allow you to share contact details in Telegram chats.</li>
+        <li><strong>Location</strong> — If you choose to share your location, WristGram accesses your location data and sends it to Telegram.</li>
+        <li><strong>Subscription &amp; In-App Purchases</strong> — WristGram uses Apple's In-App Purchase system (StoreKit) for premium subscriptions. Apple handles all payment processing. WristGram does not collect or store your payment card information. Subscription status is stored locally on your device and in Apple's servers.</li>
+        <li><strong>Device &amp; Usage Data</strong> — WristGram may temporarily log basic error and crash information for debugging purposes. <strong>No personal usage analytics or tracking is collected or shared with third parties.</strong></li>
+    </ul>
+
+    <div class="callout callout-info">
+        <div class="callout-label">💡 What we don't collect</div>
+        We do not use any analytics SDKs, third-party tracking services, or behavioral profiling. Your messages are never read, stored, or accessed by WristGram beyond what is needed to display them on your watch.
+    </div>
+
+    <h3 id="data-storage">2. How We Store Data</h3>
+    <ul>
+        <li><strong>On-Device Storage</strong> — WristGram stores minimal data locally on your Apple Watch (chat list cache, message metadata, preferences) using the watch's encrypted storage.</li>
+        <li><strong>App Group Storage</strong> — Shared settings between the Watch app and any companion components use an encrypted App Group container shared with your other Apple devices.</li>
+        <li><strong>Telegram Servers</strong> — All messages, media, contacts, and shared content are stored on Telegram's servers. Please review <a href="https://telegram.org/privacy" target="_blank" rel="noopener">Telegram's Privacy Policy</a> for their data practices.</li>
+        <li><strong>Apple Servers</strong> — Subscription and purchase records are managed by Apple per their Privacy Policy.</li>
+    </ul>
+
+    <h3 id="data-deletion">3. Data Retention &amp; Deletion</h3>
+    <p><strong>WristGram Local Data</strong> — Uninstalling WristGram removes all locally stored data from your Apple Watch. You can clear locally cached data at any time by uninstalling the app.</p>
+    <p><strong>Telegram Data</strong> — All messages and media sent or received through WristGram remain on Telegram's servers until deleted through the official Telegram app or telegram.org. To delete your Telegram account and all associated data, you must do so through Telegram's own account deletion process.</p>
+    <p><strong>Apple Subscription Data</strong> — To cancel your WristGram subscription, use the Subscriptions section in your Apple ID account settings (Settings &rarr; <em>Your Name</em> &rarr; Subscriptions) or visit <a href="https://apps.apple.com" target="_blank" rel="noopener">apps.apple.com</a>.</p>
+
+    <h3 id="third-party">4. Third-Party Services</h3>
+    <p><strong>Telegram</strong> — WristGram communicates exclusively with Telegram's servers through their official, documented API (TDLib). Your use of Telegram through WristGram is subject to Telegram's Terms of Service and Privacy Policy. We have no control over, and are not responsible for, Telegram's data collection practices.</p>
+    <p><strong>Apple</strong> — WristGram uses Apple services for app distribution, Apple Watch notification mirroring, and in-app purchases. Your use of Apple services is governed by Apple's Privacy Policy.</p>
+
+    <div class="callout callout-warning">
+        <div class="callout-label">⚠️ Important</div>
+        WristGram is a third-party client and is not affiliated with, endorsed by, or connected to Telegram F.Z. LLC. When you use WristGram, your data is primarily governed by Telegram's own privacy practices, not WristGram's.
+    </div>
+
+    <h3 id="children">5. Children's Privacy</h3>
+    <p>WristGram is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h3 id="changes-privacy">6. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. If we make significant changes, we will update the "Last updated" date above and, if required by applicable law, notify you through the app. Continued use of WristGram after any changes constitutes acceptance of the updated policy.</p>
+
+    <h3 id="contact-privacy">7. Contact Us</h3>
+    <p>If you have any questions about this Privacy Policy or WristGram's data practices, please contact us through the live WristGram support page and App Store listing.</p>
+    <p><strong>Developer:</strong> Tibor Toth</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TERMS OF USE
+═══════════════════════════════════════════════════════════ -->
+<section class="content-section" id="terms">
+    <div class="section-header">
+        <div class="section-tag terms">Terms of Use</div>
+        <h2>Terms &amp; Conditions</h2>
+        <p>These terms govern your use of WristGram. By downloading or using the app, you agree to these terms.</p>
+        <div class="last-updated">📅 May 2026</div>
+    </div>
+
+    <h3 id="license">8. License &amp; Acceptance</h3>
+    <p>WristGram is licensed to you subject to the <strong>Apple Standard Licensed Application End User License Agreement (Standard EULA)</strong>, which is available at: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">apple.com/legal/internet-services/itunes/dev/stdeula</a>.</p>
+    <p>These Terms of Use supplement the Apple Standard EULA for WristGram. In the event of any conflict between these Terms and the Apple EULA, the Apple EULA shall prevail with respect to matters governed by it.</p>
+    <p>By installing or using WristGram, you acknowledge that you have read, understood, and agree to be bound by both these Terms and the Apple Standard EULA.</p>
+
+    <h3 id="service-scope">9. Service Scope</h3>
+    <p>WristGram is an <strong>unofficial third-party Telegram client</strong> for Apple Watch:</p>
+    <ul>
+        <li>A valid Telegram account is required to use WristGram.</li>
+        <li>Initial sign-in requires Telegram on a paired iPhone to scan a QR code.</li>
+        <li>After setup, WristGram connects directly to Telegram from Apple Watch using the official TDLib library.</li>
+        <li>Notification delivery in the current release relies on Apple's standard iPhone-to-Watch notification mirroring.</li>
+    </ul>
+
+    <h3 id="telegram-relation">10. Relationship to Telegram</h3>
+    <p><strong>WristGram is not affiliated with, endorsed by, or sponsored by Telegram F.Z. LLC.</strong></p>
+    <p>Your use of Telegram through WristGram is also subject to Telegram's own Terms of Service, Privacy Policy, and platform rules. All obligations and rights relating to your Telegram account — including account suspension, data deletion, and content moderation — are governed by Telegram, not WristGram.</p>
+
+    <div class="callout callout-warning">
+        <div class="callout-label">⚠️ Third-Party Client</div>
+        WristGram is an independent project. Telegram may change its API, authentication mechanisms, or platform policies at any time, which could affect WristGram's functionality. We will endeavor to maintain compatibility but cannot guarantee uninterrupted service.
+    </div>
+
+    <h3 id="subscriptions">11. Subscriptions</h3>
+    <p>WristGram offers <strong>auto-renewable subscriptions</strong> that unlock premium features:</p>
+    <ul>
+        <li>Payment is charged to your Apple ID account at the start of each billing period.</li>
+        <li>Subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.</li>
+        <li>You can manage or cancel subscriptions at any time in your Apple ID subscription settings (Settings &rarr; <em>Your Name</em> &rarr; Subscriptions).</li>
+        <li>If a subscription expires, premium-only features revert to the free tier.</li>
+        <li>A "Restore Purchases" option is available in the app's settings for eligible subscriptions.</li>
+    </ul>
+    <p>Subscription pricing is displayed in local currency within the app and is set in the App Store. Prices may vary by region and are subject to change with notice.</p>
+
+    <div class="callout callout-success">
+        <div class="callout-label">✅ Free Tier</div>
+        The free version of WristGram lets you read messages, search chats, view photos, and use complications. No credit card or subscription is required for the free tier.
+    </div>
+
+    <h3 id="acceptable-use">12. Acceptable Use</h3>
+    <p>You agree <strong>not</strong> to use WristGram to:</p>
+    <ul>
+        <li>Violate any applicable law, regulation, or court order.</li>
+        <li>Infringe the intellectual property rights of WristGram, Telegram, Apple, or any third party.</li>
+        <li>Harass, abuse, threaten, defame, or impersonate other people.</li>
+        <li>Distribute spam, malware, viruses, or other harmful or malicious content.</li>
+        <li>Attempt to interfere with, disrupt, or gain unauthorized access to Telegram's services, Apple's platforms, or WristGram's infrastructure.</li>
+        <li>Use automated tools, bots, or scripts to access Telegram's services in violation of Telegram's terms.</li>
+    </ul>
+    <p>WristGram reserves the right to suspend or terminate your access to premium features if you violate these terms, without prejudice to any other rights or remedies available.</p>
+
+    <h3 id="availability">13. Availability</h3>
+    <p>WristGram depends on:</p>
+    <ul>
+        <li>Telegram's services and API availability</li>
+        <li>Apple's watchOS platform and App Store distribution</li>
+        <li>Network connectivity between your Apple Watch and the internet</li>
+        <li>Compatible Apple Watch hardware (watchOS 10.0 and above)</li>
+    </ul>
+    <p>Features may change, be limited, or become unavailable without notice if upstream platform or API behavior changes. WristGram does not guarantee uninterrupted or fault-tolerant service.</p>
+
+    <h3 id="disclaimer">14. Disclaimer</h3>
+    <p><strong>To the maximum extent permitted by applicable law, WristGram is provided on an "as is" and "as available" basis without warranties of any kind, express or implied.</strong></p>
+    <p>WristGram makes no representations or warranties that:</p>
+    <ul>
+        <li>The app will be uninterrupted, secure, or free of errors.</li>
+        <li>The app will meet your specific requirements or expectations.</li>
+        <li>The results obtained from using the app will be accurate or reliable.</li>
+        <li>The quality of any messages, content, or information transmitted through WristGram will meet your expectations.</li>
+    </ul>
+    <p>WristGram's liability for any claim arising from your use of the app shall not exceed the amount you have paid for premium subscriptions in the twelve (12) months preceding the claim, if any.</p>
+
+    <h3 id="changes-terms">15. Changes to These Terms</h3>
+    <p>We may update these Terms of Use from time to time. Material changes will be communicated by updating the "Last updated" date above and, where required by applicable law, through the app. Your continued use of WristGram after any changes constitutes acceptance of the updated terms.</p>
+
+    <h3 id="contact-terms">16. Contact &amp; Support</h3>
+    <p>Questions, complaints, or concerns about WristGram should be directed through the live WristGram support page and the app's App Store listing.</p>
+    <p><strong>Developer:</strong> Tibor Toth<br>
+    <strong>Support page:</strong> <a href="https://bassmastertt.github.io/WristGram-privacy/#contact-terms" target="_blank" rel="noopener">bassmastertt.github.io/WristGram-privacy/#contact-terms</a><br>
+    <strong>App:</strong> <a href="https://apps.apple.com" target="_blank" rel="noopener">apps.apple.com</a></p>
+
+    <div class="callout callout-info">
+        <div class="callout-label">📋 Apple Standard EULA</div>
+        In addition to these terms, your use of WristGram is governed by Apple's Standard EULA. You can review it at any time at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">apple.com/legal/internet-services/itunes/dev/stdeula</a>.
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+    <div class="footer-brand">
+        <img class="logo-icon" src="./WristGram.png" alt="WristGram app icon" style="width:28px;height:28px;">
+        <span style="font-weight:600;font-size:14px;color:var(--text-primary);">WristGram</span>
+    </div>
+    <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="https://apps.apple.com" target="_blank" rel="noopener">App Store</a>
+        <a href="https://telegram.org/privacy" target="_blank" rel="noopener">Telegram Privacy</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple EULA</a>
+    </div>
+    <p>&copy; 2026 Tibor Toth. WristGram is an unofficial third-party Telegram client for Apple Watch.<br>
+    Apple, Apple Watch, and watchOS are trademarks of Apple Inc. Telegram is a trademark of Telegram F.Z. LLC.</p>
+</footer>
+
+<!-- Back to top -->
+<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</a>
+
+<script>
+    // Show/hide back-to-top button
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Highlight active nav link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop - 100;
+            if (window.scrollY >= top) current = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
