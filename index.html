@@ -21,6 +21,11 @@
             --accent: #64B5F6;
             --accent-dim: rgba(100, 181, 246, 0.15);
             --accent-border: rgba(100, 181, 246, 0.25);
+            --accent-strong: #8ecbff;
+            --success: #81C784;
+            --success-strong: #8adf9b;
+            --warning: #FFD54F;
+            --warning-strong: #ffe082;
             --text-primary: #e8edf5;
             --text-secondary: #8896aa;
             --text-muted: #5a6578;
@@ -44,6 +49,11 @@
             --accent: #1d72d8;
             --accent-dim: rgba(29, 114, 216, 0.1);
             --accent-border: rgba(29, 114, 216, 0.18);
+            --accent-strong: #1253a6;
+            --success: #2f8f4e;
+            --success-strong: #1f6f3a;
+            --warning: #b77910;
+            --warning-strong: #8e5a04;
             --text-primary: #102033;
             --text-secondary: #425468;
             --text-muted: #697a8c;
@@ -244,7 +254,7 @@
             border-radius: 100px;
             font-size: 12px;
             font-weight: 500;
-            color: var(--accent);
+            color: var(--accent-strong);
             margin-bottom: 20px;
             letter-spacing: 0.3px;
         }
@@ -253,7 +263,7 @@
             content: '';
             width: 6px;
             height: 6px;
-            background: var(--accent);
+            background: var(--accent-strong);
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
         }
@@ -373,7 +383,7 @@
             justify-content: center;
             font-size: 11px;
             font-weight: 600;
-            color: var(--accent);
+            color: var(--accent-strong);
             flex-shrink: 0;
             font-family: var(--font-mono);
         }
@@ -419,7 +429,7 @@
             margin-bottom: 10px;
         }
 
-        .section-tag.privacy { color: #4CAF50; }
+        .section-tag.privacy { color: var(--success-strong); }
         .section-tag.terms { color: var(--accent); }
 
         .section-tag::before {
@@ -505,19 +515,19 @@
         .callout-info {
             background: rgba(100, 181, 246, 0.08);
             border: 1px solid rgba(100, 181, 246, 0.2);
-            color: #90CAF9;
+            color: var(--accent-strong);
         }
 
         .callout-warning {
             background: rgba(255, 202, 40, 0.07);
             border: 1px solid rgba(255, 202, 40, 0.2);
-            color: #FFD54F;
+            color: var(--warning-strong);
         }
 
         .callout-success {
             background: rgba(76, 175, 80, 0.08);
             border: 1px solid rgba(76, 175, 80, 0.2);
-            color: #81C784;
+            color: var(--success-strong);
         }
 
         .callout-label {
